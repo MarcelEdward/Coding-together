@@ -10,4 +10,9 @@
 
 @interface CalculatorViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *display;
+
+- (IBAction)openrationPressed:(id)sender;
+- (IBAction)enterPressed;
+
 @end

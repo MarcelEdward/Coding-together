@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F48160C159E0A0300CBFC08 /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F48160B159E0A0300CBFC08 /* CalculatorBrain.m */; };
 		1FCE73E8159DE91D00B48497 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCE73E7159DE91D00B48497 /* UIKit.framework */; };
 		1FCE73EA159DE91D00B48497 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCE73E9159DE91D00B48497 /* Foundation.framework */; };
 		1FCE73EC159DE91D00B48497 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCE73EB159DE91D00B48497 /* CoreGraphics.framework */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F48160A159E0A0300CBFC08 /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
+		1F48160B159E0A0300CBFC08 /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
 		1FCE73E3159DE91D00B48497 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCE73E7159DE91D00B48497 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1FCE73E9159DE91D00B48497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +86,8 @@
 				1FCE73FC159DE91D00B48497 /* CalculatorViewController.h */,
 				1FCE73FD159DE91D00B48497 /* CalculatorViewController.m */,
 				1FCE73EE159DE91D00B48497 /* Supporting Files */,
+				1F48160A159E0A0300CBFC08 /* CalculatorBrain.h */,
+				1F48160B159E0A0300CBFC08 /* CalculatorBrain.m */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 				1FCE73F4159DE91D00B48497 /* main.m in Sources */,
 				1FCE73F8159DE91D00B48497 /* CalculatorAppDelegate.m in Sources */,
 				1FCE73FE159DE91D00B48497 /* CalculatorViewController.m in Sources */,
+				1F48160C159E0A0300CBFC08 /* CalculatorBrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +200,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Marcel Verhagen (2999869C2J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Marcel Verhagen (2999869C2J)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -209,6 +216,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "FB06EDD3-F8BD-4C32-8690-6EE0BEEC7926";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FB06EDD3-F8BD-4C32-8690-6EE0BEEC7926";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -219,7 +228,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Marcel Verhagen (2999869C2J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Marcel Verhagen (2999869C2J)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -228,6 +238,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "FB06EDD3-F8BD-4C32-8690-6EE0BEEC7926";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FB06EDD3-F8BD-4C32-8690-6EE0BEEC7926";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -236,10 +248,14 @@
 		1FCE7402159DE91D00B48497 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Marcel Verhagen (2999869C2J)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calculator/Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Calculator/Calculator-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -247,10 +263,14 @@
 		1FCE7403159DE91D00B48497 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Marcel Verhagen (2999869C2J)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calculator/Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Calculator/Calculator-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -274,6 +294,7 @@
 				1FCE7403159DE91D00B48497 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
