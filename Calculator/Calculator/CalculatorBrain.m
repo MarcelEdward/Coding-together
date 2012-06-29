@@ -26,6 +26,7 @@
 
 - (void)pushOperand: (double)operand;
 {
+    NSLog(@"number %g",operand);
     NSNumber *openrandObject = [NSNumber numberWithDouble:operand];
     [self.operandStack addObject:openrandObject];
 }
@@ -43,18 +44,20 @@
     
     if ([operation isEqualToString:@"+"]) {
         result = [self popOperand] + [self popOperand];
-    }
-
-    if ([operation isEqualToString:@"-"]) {
-        result = [self popOperand] - [self popOperand];
-    }
-    
-    if ([operation isEqualToString:@"*"]) {
+    } else if ([operation isEqualToString:@"-"]) {
+        double subtrahend = [self popOperand];
+        result = [self popOperand] - subtrahend;
+    } else if ([operation isEqualToString:@"*"]) {
         result = [self popOperand] * [self popOperand];
-    }
-    
-    if ([operation isEqualToString:@"/"]) {
-        result = [self popOperand] / [self popOperand];
+    } else if ([operation isEqualToString:@"/"]) {
+        double divisor = [self popOperand];
+        if (divisor) result = [self popOperand] / divisor;
+    } else if ([operation isEqualToString:@"sin"]) {
+        result = sin([self popOperand]);
+    } else if ([operation isEqualToString:@"cos"]) {
+        result = cos([self popOperand]);
+    } else if ([operation isEqualToString:@"sqrt"]) {
+        result = sqrt([self popOperand]);
     }
     
     [self pushOperand:result];

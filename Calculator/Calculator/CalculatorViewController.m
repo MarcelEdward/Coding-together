@@ -28,6 +28,13 @@
 
 - (IBAction)digitPressed:(UIButton *)sender {
     NSString *digit = [sender currentTitle];
+    if ([digit isEqualToString:@"π"]) {
+        [self enterPressed];
+        [self.brain pushOperand:M_PI];
+        self.display.text = digit;
+        self.userIsInTheMiddleOfEnteringANumber = NO;
+        //[self enterPressed];
+    } else
     if (self.userIsInTheMiddleOfEnteringANumber) {
         self.display.text = [self.display.text stringByAppendingString:digit];
     } else {
