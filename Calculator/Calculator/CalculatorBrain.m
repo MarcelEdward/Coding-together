@@ -24,6 +24,11 @@
     return _operandStack;
 }
 
+- (void)clearEverything
+{
+    [self.operandStack removeAllObjects];
+}
+
 - (void)pushOperand: (double)operand;
 {
     NSLog(@"number %g",operand);
@@ -52,12 +57,18 @@
     } else if ([operation isEqualToString:@"/"]) {
         double divisor = [self popOperand];
         if (divisor) result = [self popOperand] / divisor;
+        else return 0;
     } else if ([operation isEqualToString:@"sin"]) {
-        result = sin([self popOperand]);
+        // convert to degrees
+        result = sin([self popOperand] * (180 / M_PI));
     } else if ([operation isEqualToString:@"cos"]) {
-        result = cos([self popOperand]);
-    } else if ([operation isEqualToString:@"sqrt"]) {
+        result = cos([self popOperand] * (180 / M_PI));
+    } else if ([operation isEqualToString:@"√"]) {
         result = sqrt([self popOperand]);
+    } else if ([operation isEqualToString:@"π"]) {
+        result = M_PI;
+    } else if ([operation isEqualToString:@"x²"]) {
+        result = pow([self popOperand],2);
     }
     
     [self pushOperand:result];
