@@ -18,6 +18,7 @@
 
 @synthesize display = _display;
 @synthesize showEverything = _showEverything;
+@synthesize is = _is;
 @synthesize userIsInTheMiddleOfEnteringANumber = _userIsInTheMiddleOfEnteringANumber;
 @synthesize  brain = _brain;
 
@@ -50,9 +51,10 @@
         self.userIsInTheMiddleOfEnteringANumber = YES;
     }
     self.showEverything.text = [NSString stringWithFormat:@"%@%@",self.showEverything.text, digit];
+    self.is.text = @"";
 }
 
-- (IBAction)openrationPressed:(id)sender {
+- (IBAction)openrationPressed:(UIButton*)sender {
     if (self.userIsInTheMiddleOfEnteringANumber) {
         [self enterPressed];
     }
@@ -60,6 +62,9 @@
     double result = [self.brain performOperation:operation];
     self.display.text = [NSString stringWithFormat:@"%g", result];
     self.showEverything.text = [NSString stringWithFormat:@"%@ %@ ",self.showEverything.text, operation];
+    // do not show = if the operation π is pressed
+    if (![operation isEqualToString:@"π"]) self.is.text = @"=";
+    
 }
 
 - (IBAction)enterPressed {
@@ -71,6 +76,7 @@
 - (IBAction)clearPressed:(id)sender {
     self.showEverything.text = @"";
     [self.brain clearEverything];
+    self.display.text = @"";
 }
 
 - (IBAction)plusOrMin:(id)sender {
@@ -78,9 +84,17 @@
     self.display.text = [NSString stringWithFormat:@"%g", result];
 }
 
+- (IBAction)backspace:(id)sender {
+    if (self.userIsInTheMiddleOfEnteringANumber) {
+        self.display.text = [self.display.text substringToIndex:[self.display.text length] - 1];
+        self.showEverything.text = [self.showEverything.text substringToIndex:[self.showEverything.text length] - 1];
+    }
+}
+
 //xcode added this function by itself
 - (void)viewDidUnload {
     [self setShowEverything:nil];
+    [self setIs:nil];
     [super viewDidUnload];
 }
 @end

@@ -14,14 +14,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="Ylc-8I-hFt">
-                                <rect key="frame" x="20" y="94" width="280" height="45"/>
+                                <rect key="frame" x="20" y="94" width="243" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="yHb-fY-fii">
-                                <rect key="frame" x="20" y="66" width="280" height="20"/>
+                                <rect key="frame" x="20" y="66" width="263" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.3333333432674408" alpha="1" colorSpace="calibratedWhite"/>
@@ -381,11 +381,34 @@
                                     <action selector="clearPressed:" destination="2" eventType="touchUpInside" id="uEG-mm-Mv2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="XJq-t1-Zc4">
+                                <rect key="frame" x="285" y="64" width="15" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zvo-bv-WFe">
+                                <rect key="frame" x="266" y="101" width="34" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="←">
+                                    <color key="titleColor" red="0.19607843458652496" green="0.30980393290519714" blue="0.5215686559677124" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backspace:" destination="2" eventType="touchUpInside" id="app-GS-VIg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="display" destination="Ylc-8I-hFt" id="C11-IV-ccW"/>
+                        <outlet property="is" destination="XJq-t1-Zc4" id="pnR-0b-m3u"/>
                         <outlet property="showEverything" destination="yHb-fY-fii" id="Tsd-kR-LTZ"/>
                     </connections>
                 </viewController>
@@ -396,11 +419,13 @@
         <class className="CalculatorViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CalculatorViewController.h"/>
             <relationships>
+                <relationship kind="action" name="backspace:"/>
                 <relationship kind="action" name="clearPressed:"/>
                 <relationship kind="action" name="enterPressed"/>
                 <relationship kind="action" name="openrationPressed:"/>
                 <relationship kind="action" name="plusOrMin:"/>
                 <relationship kind="outlet" name="display" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="is" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="showEverything" candidateClass="UILabel"/>
             </relationships>
         </class>

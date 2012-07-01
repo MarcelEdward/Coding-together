@@ -18,8 +18,8 @@
 		1FCE73F2159DE91D00B48497 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FCE73F0159DE91D00B48497 /* InfoPlist.strings */; };
 		1FCE73F4159DE91D00B48497 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE73F3159DE91D00B48497 /* main.m */; };
 		1FCE73F8159DE91D00B48497 /* CalculatorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE73F7159DE91D00B48497 /* CalculatorAppDelegate.m */; };
-		1FCE73FB159DE91D00B48497 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FCE73F9159DE91D00B48497 /* MainStoryboard.storyboard */; };
 		1FCE73FE159DE91D00B48497 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCE73FD159DE91D00B48497 /* CalculatorViewController.m */; };
+		1FF90F4615A089260020F358 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FCE73F9159DE91D00B48497 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,11 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FCE73F2159DE91D00B48497 /* InfoPlist.strings in Resources */,
-				1FCE73FB159DE91D00B48497 /* MainStoryboard.storyboard in Resources */,
 				1F4A6D3015A0786800789963 /* Default@2x.png in Resources */,
 				1F4A6D3315A0786B00789963 /* Default.png in Resources */,
 				1F4A6D3515A0788300789963 /* icon 114x114.png in Resources */,
 				1F4A6D3715A0788800789963 /* icon 57x57.png in Resources */,
+				1FF90F4615A089260020F358 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
